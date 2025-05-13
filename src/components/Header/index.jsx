@@ -16,10 +16,18 @@ export default function Header(){
                     <input className="w-[450px] h-[40px] rounded-md hover:bg-[#d8e4dbc9] bg-[#7ecb7c] justify-center items-center"/>
                 </div>
                   <div className="w-[70%] h-[70px] flex items-center justify-end  gap-8 mr-20">
-                    <button className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Login</button>
-                    <button className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]" >Cadastro</button>
-                    <button className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Assinatura</button> 
-                    <button className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Vantagens</button>
+                    <button
+                    onClick={() => window.location.href = "/login"}
+                     className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Login</button>
+                    <button 
+                    onClick={() => window.location.href = "/cadastro"}
+                    className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]" >Cadastro</button>
+                    <button 
+                    onClick={() => window.location.href = "/assinatura"}
+                    className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Assinatura</button> 
+                    <button 
+                    onClick={() => window.location.href = "/vantagens"}
+                    className="w-[120px] h-[50px]  rounded-md hover:bg-[#7ecb7c] text-[20px] font-bold text-[#215f1f]">Vantagens</button>
                   </div> 
             </div>
 
