@@ -1,13 +1,12 @@
 //pagina HOME 
 
-import Header from "@/components/Header";
+
+import PageWrapper from "@/components/PageWrapper";
 
 export default function Home(){
     return (
-        <div className="w-full h-screen flex bg-[#acb7afbb]">
-            <Header />
-           
-        </div>
+        <PageWrapper>
+            <div className="w-[123px] h-[123px]"></div>
+        </PageWrapper>
     )
-
 }

@@ -1,5 +1,7 @@
 export default function assinatura() {
     return(
-        <div className="">assinatura</div>
+        <PageWrapper>
+        <div className="w-full h-screen">assinatura</div>
+        </PageWrapper>
     )
 }
