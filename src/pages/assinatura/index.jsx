@@ -1,3 +1,5 @@
+import PageWrapper from "@/components/PageWrapper";
+
 export default function assinatura() {
     return(
         <PageWrapper>
