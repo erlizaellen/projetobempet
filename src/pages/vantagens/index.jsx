@@ -12,8 +12,8 @@ export default function vantagens() {
                         <div className=""></div>
                         <div className=""></div>
                     </div>
-                    <div className="w-full h-[10%] bg-amber-500 flex justify-center items-center ">
-                        <button className="">Assinar</button>
+                    <div className="w-full h-[10%] bg-[#15dd40]  flex justify-center items-center border border-[#ce1bb0] rounded-b-xl">
+                        <button className="text-white text-[30px]">Assinar</button>
                     </div>
                 </div>
 
