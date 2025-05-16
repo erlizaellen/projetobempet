@@ -1,6 +1,7 @@
 import { IoLogoInstagram } from "react-icons/io5";
 import { LuFacebook } from "react-icons/lu";
 import { FaWhatsapp } from "react-icons/fa";
+import Paw from "../Paw";
 
 
 export default function Footer() {  
@@ -10,8 +11,12 @@ export default function Footer() {
                 <div>
                 <img className="size-[150px] h-[140px] cursor-pointer" src= "/bempetlogo.png" onClick={() => window.location.href = "/"}  alt="" />
                 </div>
-                <div className="text-white text-[20px] font-bold">
-                    <p className="pb-3">Siga-nos em nossas redes sociais</p>
+                <div className="">
+                    <Paw></Paw>
+                </div>
+                <div className="text-white text-[20px] font-bold flex flex-col items-center">
+                    <p className="pb-3 max-w-[200px]">Siga-nos em nossas redes sociais</p>
+
                     <div className="flex flex-row justify-end items-center gap-5">
                         <IoLogoInstagram onClick={() => window.open("https://www.instagram.com")} size={40} className="text-[#5bf356c2] p-1 bg-white rounded-full cursor-pointer"/>
                         <LuFacebook onClick={() => window.open("https://www.facebook.com")} size={40} className="text-[#5bf356c2] p-1 bg-white rounded-full cursor-pointer"/>
