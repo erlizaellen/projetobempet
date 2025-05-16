@@ -16,10 +16,10 @@ export default function vantagens() {
             <div className="w-full h-auto flex flex-wrap ">
                 <div className="w-full h-full flex flex-wrap ">
 
-                    <CardVantagens titulo={"Tudo para seu Pet"} texto={"rações e acessórios que seus pets vão adorar. Petshops afiliados na região."} />
-                    <CardVantagens className={"bg-blue-200"} titulo={"Parcerias em expansão"} texto={"A cada semana, novas clinicas veterinarias e petshop são adicionado a nossa rede de parceiros com ofertas exclusivas."} />
-                    <CardVantagens className={"bg-amber-200"} titulo={"Localização inteligente"} texto={"Encontre clinicas de atendimento proxímas da sua casa, facilitando o acessos aos melhores serviços para seu pet."} />
-                    <CardVantagens className={"bg-lime-200"} titulo={"Beneficio por assinatura"} texto={"Assinando o Bem Pet,você automaticamente tem acesso a deversos beneficíos exclusivos"} />
+                    <CardVantagens titulo={"Tudo para seu Pet"} texto={"Rações e acessórios que seus pets vão adorar. Petshops afiliados na sua região."} />
+                    <CardVantagens className={"bg-blue-200"} titulo={"Parcerias em expansão"} texto={"A cada semana, novas clínicas veterinárias e petshop são adicionado a nossa rede de parceiros com ofertas exclusivas."} />
+                    <CardVantagens className={"bg-amber-200"} titulo={"Localização inteligente"} texto={"Encontre clínicas de atendimento próximas da sua casa, facilitando o acessos aos melhores serviços para seu pet."} />
+                    <CardVantagens className={"bg-lime-200"} titulo={"Benefício por assinatura"} texto={"Assinando o Bem Pet,você automaticamente tem acesso a deversos benefícios exclusivos"} />
                 </div>
                 <div className="w-full h-[50px] flex items-center justify-center  mt-8">
                     
