@@ -2,7 +2,7 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 
 export default function Header({}){
     return(
-        <div className="w-full h-[80px] flex flex-col">
+        <div className="w-full h-[80px] flex flex-col max-md:hidden">
             <div className="w-full h-[80px] bg-[#5bf356c2] flex">
                 <div className="w-[20%]">
                    <div className="w-[90px] h-[70px] ml-8 cursor-pointer">
