@@ -5,8 +5,8 @@ export default function vantagens() {
     return (
         <PageWrapper>
             <div className="w-full p-8 text-center">
-                <h1 className="text-[50px] font-bold text-[#215f1f]">Vantagens</h1>
-                <p className="mb-8 text-[25px] font-bold text-[#215f1f]/70">conheça os todos beneficios execlusivos que preparamos
+                <h1 className="text-[50px] font-bold text-[#215f1f]/70">Vantagens</h1>
+                <p className="mb-8 text-[25px] font-bold text-[#215f1f]"> Conheça os <span className="text-[#215f1f]/70">todos</span> beneficios execlusivos que preparamos
                     para você e seu pet. <br /> Uma experiência para garantir o maior cuidado.</p>
             </div>
           <div className="w-full h-full flex flex-wrap">
@@ -16,6 +16,7 @@ export default function vantagens() {
             <CardVantagens  className={"bg-amber-200"} titulo={"Localização inteligente"} texto={"Encontre clinicas de atendimento proxímas da sua casa, facilitando o acessos aos melhores serviços para seu pet."}/>
             <CardVantagens className={"bg-lime-200"} titulo={"Beneficio por assinatura"} texto={"Assinando o Bem Pet,você automaticamente tem acesso a deversos beneficíos exclusivos"}/>
         </div>
+        <div className=""></div>
         </PageWrapper>
     )
 }
