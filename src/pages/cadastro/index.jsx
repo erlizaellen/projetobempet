@@ -4,7 +4,7 @@ export default function Cadastro() {
     <PageWrapper>
       <div className="w-full h-full flex gap-40 p-40 bg-[#5bf356c2]">
             <div className="w-[50%] h-[70vh] rounded-xl">
-          <img className="size-150" src="/img/imagem-cadastro.svg" alt="" />
+          <img className="size-160" src="/img/imagem-cadastro.svg" alt="" />
             </div>
             <div className="w-[50%] h-[70vh] rounded-xl">
           <div className="w-full h-[10%] rounded-2xl">
