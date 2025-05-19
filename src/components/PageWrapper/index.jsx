@@ -11,7 +11,6 @@ export default function PageWrapper({children}){
                 {children}
                 
             </div>
-           
             <Footer/>
         </div>
     )
