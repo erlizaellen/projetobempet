@@ -8,7 +8,7 @@ export default function Login() {
   {/* Container da esquerda */}
   <div className="w-[600px] h-[90vh] flex flex-col mt-8 ml-10 rounded-xl p-8">
     <div className="w-full h-[100px] flex items-center justify-center mb-8">
-      <h1 className="font-bold text-[40px] text-[#215f1f]">LOGIN</h1>
+      <h1 className="font-bold text-[40px] text-[#215f1f]">Login</h1>
     </div>
 
     {/* Formulário de login */}

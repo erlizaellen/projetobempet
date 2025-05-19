@@ -8,9 +8,7 @@ export default function Cadastro() {
         </div>
         <div className="w-[50%] h-[70vh] rounded-xl">
           <div className="w-full h-[10%] rounded-2xl">
-            <h1 className="font-bold text-white text-[30px] justify-center flex">
-              Cadastre-se
-            </h1>
+            <h1 className="font-bold text-white text-[30px] justify-center flex">Cadastre-se</h1>
           </div>
 
           <div className="w-full h-[60%] rounded-xl flex flex-col">
@@ -20,15 +18,13 @@ export default function Cadastro() {
               type="text"
               className="w-[90%] h-[30px] bg-white p-5 m-2 rounded-3xl"
             />
-            <label className="text-white font-bold text-[20px] p-4">
-              Email
-            </label>
+            <label className="text-white font-bold text-[20px] p-4">Email</label>
             <input
               placeholder="Digite seu e-mail"
               type="email"
               className="w-[90%] h-[30px] bg-white p-5 m-2 rounded-3xl"
             />
-            <label className="text-white font-bold text-[20px] p-4"></label>{" "}
+            <label className="text-white font-bold text-[20px] p-4">Senha</label>
             <input
               placeholder="Digite sua senha"
               type="password"
@@ -41,15 +37,11 @@ export default function Cadastro() {
               Cadast
             </button>
 
-            <p className="text-white text-[15px] flex flex-col items-center">
-              Já tem uma conta
-              <a className="cursor-pointer" href="">
-                Entrar
-              </a>
+            <p className="text-white text-[15px] flex flex-col items-center">Já tem uma conta?
+              <a className="cursor-pointer" href="">Entrar</a>
             </p>
           </div>
         </div>
-         
       </div>
     </PageWrapper>
   );
