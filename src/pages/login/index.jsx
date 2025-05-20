@@ -3,7 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 export default function Login() {
   return (
     <PageWrapper>
-      <div className="w-full h-full flex bg-[#5bf356c2]">
+      <div className="w-full h-full flex bg-gradient-to-t from-[#d8e4dbc9] to-[#5bf356c2]">
         {/* Container da direita com imagem */}
         <div className="w-[50%] flex items-center justify-center ml-20 ">
           <img src="/img/loginfoto.png" alt="desenho" />
