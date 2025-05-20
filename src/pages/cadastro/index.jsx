@@ -30,7 +30,7 @@ export default function Cadastro() {
               className="w-[90%] h-[30px] bg-white p-5 m-2 rounded-3xl"
             />
           </div>
-            <div className="w-full h-[60%] justify-center flex-col items-center flex max-md:h-auto">
+            <div className="w-full h-[60%] justify-center flex-col items-center max-sm:h-[50%] flex max-md:h-auto">
             <button className="text-[#215f1f] font-bold text-[20px] cursor-pointer 
              border-4 rounded-3xl w-[150px]">Cadastrar</button>
         <p className="text-[#215f1f] text-[15px] flex flex-col items-center font-bold">Já tem uma conta?
