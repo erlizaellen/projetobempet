@@ -6,8 +6,8 @@ import Paw from "../Paw";
 
 export default function Footer() {  
     return(
-        <div className="w-full h-[300px] flex flex-col items-center bg-[#5bf356c2] p-4 sm:p-8 lg:p-16">
-            <div className="w-full h-[149px] flex items-center justify-between px-5 mb-4">
+        <div className="w-full h-[220px] flex flex-col items-center bg-[#5bf356c2] p-4 sm:p-8">
+            <div className="w-full h-[109px] flex items-center justify-between px-5 pb-3 mb-4">
                 <div>
                 <img className="size-[150px] h-[140px] cursor-pointer" src= "/bempetlogo.png" onClick={() => window.location.href = "/"}  alt="" />
                 </div>
@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="w-[90%] h-[1px] bg-white/70"/>
-            <div className="w-full h-[150px] flex items-center justify-center">
+            <div className="w-full h-[100px] flex items-center justify-center">
                     <p className="text-white text-[20px] font-bold">© 2025 Bem Pet. Todos os direitos reservados.</p>
             </div>
             
