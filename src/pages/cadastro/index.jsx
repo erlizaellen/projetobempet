@@ -31,9 +31,9 @@ export default function Cadastro() {
             />
           </div>
             <div className="w-full h-[60%] justify-center flex-col items-center flex max-md:h-auto">
-            <button className="text-white max-md:text-[#215f1f] font-bold text-[20px] cursor-pointer 
+            <button className="text-[#215f1f] font-bold text-[20px] cursor-pointer 
              border-4 rounded-3xl w-[150px]">Cadastrar</button>
-        <p className="text-white text-[15px] flex flex-col items-center max-md:text-[#215f1f] max-md:font-bold">Já tem uma conta?
+        <p className="text-[#215f1f] text-[15px] flex flex-col items-center font-bold">Já tem uma conta?
               <a className="cursor-pointer" href="">Entrar</a>
             </p>
           </div>
