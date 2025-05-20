@@ -7,12 +7,12 @@ export default function Login() {
       <div className="w-full h-full flex">
 
         {/* Container da direita com imagem */}
-        <div className="w-[50%] flex items-center justify-center ml-20 ">
+        <div className="w-[50%] flex items-center justify-center ml-20 max-md:hidden">
           <img src="/img/loginfoto.png" alt="desenho" />
         </div>
 
         {/* Container da esquerda */}
-        <div className="w-[600px] h-[100vh] flex flex-col mt-8 ml-10 rounded-xl p-8">
+        <div className="w-[600px] h-[100vh] flex flex-col mt-8 ml-10 rounded-xl p-8 max-md:w-full max-md:ml-0 max-md:mt-0">
           <div className="w-full h-[100px] flex items-center justify-center mb-8">
             <h1 className="font-bold text-[30px] text-white">Login</h1>
           </div>
@@ -65,6 +65,6 @@ export default function Login() {
           </form>
         </div>
       </div>
-    </PageWrapper>
+    </PageWrapper >
   );
 }
