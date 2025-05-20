@@ -3,7 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 export default function Login() {
   return (
     <PageWrapper>
-      <div className="w-full h-full flex bg-[#5bf356c2]">
+      <div className="w-full h-full flex">
         {/* Container da direita com imagem */}
         <div className="w-[50%] flex items-center justify-center ml-20 ">
           <img src="/img/loginfoto.png" alt="desenho" />
@@ -52,7 +52,7 @@ export default function Login() {
             <div className="w-full h-[40%] justify-center flex-col items-center flex">
               <button
                 type="submit"
-                className="text-white font-bold text-[20px] cursor-pointer border border-4 rounded-3xl w-[150px]"
+                className="text-white font-bold text-[20px] cursor-pointer  border-4 rounded-3xl w-[150px]"
               >
                 Entrar
               </button>
