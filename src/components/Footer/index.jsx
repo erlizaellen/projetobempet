@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className="">
                     <Paw></Paw>
                 </div>
-                <div className="text-white text-[20px] font-bold flex flex-col items-center">
+                <div className="text-white text-[20px] font-bold flex flex-col items-center max-md:hidden">
                     <p className="pb-3 max-w-[200px]">Siga-nos em nossas redes sociais</p>
 
                     <div className="flex flex-row justify-end items-center gap-5">
