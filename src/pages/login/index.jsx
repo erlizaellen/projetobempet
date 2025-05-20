@@ -12,7 +12,7 @@ export default function Login() {
         </div>
 
         {/* Container da esquerda */}
-        <div className="w-[600px] h-[100vh] flex flex-col mt-8 ml-10 rounded-xl p-8 max-md:w-full max-md:ml-0 max-md:mt-0">
+        <div className="w-[600px] h-[100%] flex flex-col mt-8 ml-10 rounded-xl p-8 max-md:w-full max-md:ml-0 max-md:mt-0">
           <div className="w-full h-[100px] flex items-center justify-center mb-8">
             <h1 className="font-bold text-[30px] text-white">Login</h1>
           </div>
