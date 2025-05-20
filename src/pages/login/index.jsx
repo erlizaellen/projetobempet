@@ -54,11 +54,11 @@ export default function Login() {
             <div className="w-full h-[40%] justify-center flex-col items-center flex">
               <button
                 type="submit"
-                className="text-white font-bold text-[20px] cursor-pointer  border-4 rounded-3xl w-[150px]"
+                className="text-[#215f1f] font-bold text-[20px] cursor-pointer  border-4 rounded-3xl w-[150px]"
               >
                 Entrar
               </button>
-              <p className="text-white text-[15px] flex flex-col items-center cursor-pointer">
+              <p className="text-[#215f1f] text-[15px] flex flex-col items-center cursor-pointer">
                 Esqueceu sua senha?
               </p>
             </div>
