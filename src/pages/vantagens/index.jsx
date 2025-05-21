@@ -11,7 +11,7 @@ export default function vantagens() {
                 </div>
 
                 <p className="mb-8 text-[25px] font-bold text-[#215f1f]"> Conheça os <span className="text-[#215f1f]/70">todos</span> beneficios execlusivos que preparamos
-                    para você e seu pet. <br/> Uma experiência para garantir o maior cuidado.</p>
+                    para você e seu pet. <br /> Uma experiência para garantir o maior cuidado.</p>
             </div>
             <div className="w-full h-auto flex flex-wrap ">
                 <div className="w-full h-full flex flex-wrap max-md:grig">
@@ -22,8 +22,8 @@ export default function vantagens() {
                     <CardVantagens className={"bg-lime-200"} titulo={"Benefício por assinatura"} texto={"Assinando o Bem Pet,você automaticamente tem acesso a deversos benefícios exclusivos"} />
                 </div>
                 <div className="w-full h-full flex items-center justify-center ">
-
                     <button
+                        onClick={() => window.location.href = "/assinatura"}
                         type="submit"
                         className="flex items-center justify-center max-md:w-full w-[15%]  h-[50px] 
                          mp:bg text-white font-bold bg-[#215f1f] mt-12 text-[20px] rounded-full
@@ -32,7 +32,6 @@ export default function vantagens() {
                         <p>Assinar</p>
                         <TbPawFilled className="ml-2" />
                     </button>
-
                 </div>
             </div>
 
