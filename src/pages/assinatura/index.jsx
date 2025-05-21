@@ -51,11 +51,15 @@ export default function assinatura() {
         <PageWrapper>
         <div className="w-full h-auto flex justify-center">
             <ToastContainer position="top-right" autoClose={5000} theme="colored" />
-            <div className="w-[400px] h-auto flex flex-col items-center rounded-xl bg-white p-5 gap-3">
+            <div className="w-[400px] h-auto flex flex-col items-center rounded-xl bg-white p-5 gap-3 font-bold">
+                <div className="w-full flex justify-between items-center text-[#215f1f] mb-4 gap-3 text-[40px]">
+                    <p>Valor:</p>
+                    <p>R$0,00</p>
+                </div>
                 <div className="flex justify-center items-center text-[#215f1f] mb-4 gap-3">
-                <TbPawFilled size={20}/>
-                <h1 className="text-[20px] font-bold">Escolha opção de pagamento</h1>
-                <TbPawFilled size={20}/>
+                    <TbPawFilled size={20}/>
+                    <h1 className="text-[20px]">Escolha opção de pagamento</h1>
+                    <TbPawFilled size={20}/>
                 </div>
                 <div className="w-full h-[20%]] flex gap-3 mb-4">
                     <button 
