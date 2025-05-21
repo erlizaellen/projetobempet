@@ -1,4 +1,5 @@
 import PageWrapper from "@/components/PageWrapper";
+import Link from "next/link";
 
 export default function Login() {
   return (
@@ -52,15 +53,16 @@ export default function Login() {
 
             {/* Botão de login */}
             <div className="w-full h-[40%] justify-center flex-col items-center flex">
-              <button
+              <button 
                 type="submit"
                 className="text-[#215f1f] font-bold text-[20px] cursor-pointer  border-4 rounded-3xl w-[150px]"
               >
                 Entrar
               </button>
-              <p className="text-[#215f1f] text-[15px] flex flex-col items-center cursor-pointer">
+              <p className="text-[#215f1f] text-[15px]  mt-4 flex flex-col items-center cursor-pointer underline">
                 Esqueceu sua senha?
               </p>
+              <Link href="/cadastro" className="text-[#215f1f] text-[15px] mt-3 cursor-pointer underline">Já possui cadastro?</Link>
             </div>
           </form>
         </div>
