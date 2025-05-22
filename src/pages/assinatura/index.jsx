@@ -16,6 +16,14 @@ export default function assinatura() {
     const [ano, setAno] = useState(0)
     const [cvv, setCvv] = useState(0)
 
+    function formatNumero(evento) {
+        let numero = evento.target.value
+        let numeroFormatado = numero.replace(/\D/g, '') //Remove tudo que nao for numero
+        numeroFormatado = numeroFormatado.substring(0, 16) //Limita a quantidade de caracteres a 16
+        numeroFormatado = numeroFormatado.replace(/(\d{4})/g, '$1 ').trim() //cria espaçamento de 4 em 4 digitos
+        setNumero(numeroFormatado)
+  }
+
     async function pagar() {
         if (opcao == "Pix") {
             return toast.error("Indisponível para esta opção de pagamento");
@@ -23,7 +31,7 @@ export default function assinatura() {
         if (!nome || !numero || !mes || !ano || !cvv) {
             return toast.error("Preencha todos os campos");
         }
-        if (numero.length !== 16) {
+        if (numero.replace(/\s/g, '').length !== 16) {
             return toast.error("Numero do cartao inválido");
         }
         if (cvv.length !== 3) {
@@ -56,12 +64,12 @@ export default function assinatura() {
                     <p>Valor:</p>
                     <p>R$0,00</p>
                 </div>
-                <div className="flex justify-center items-center text-[#215f1f] mb-4 gap-3">
+                <div className="flex justify-center items-center text-[#215f1f] mb-2 gap-3">
                     <TbPawFilled size={22}/>
                     <h1 className="text-[22px]">Escolha opção de pagamento</h1>
                     <TbPawFilled size={22}/>
                 </div>
-                <div className="w-full h-[20%]] flex gap-3 mb-4">
+                <div className="w-full h-[20%]] flex gap-3">
                     <button 
                         onClick={() => setOpcao('Cartao')}
                         className="w-[50%] h-[40px] flex justify-center items-center gap-3 rounded-md border border-[#215f1f] bg-[#5bf356c2] cursor-pointer hover:bg-[#5bf356c2]/80">
@@ -78,7 +86,7 @@ export default function assinatura() {
                 {
                     opcao == "Cartao" ? (
                         <div className="w-full h-[80%]">
-                        <div className="w-full flex flex-col">
+                        <div className="w-full flex flex-col pb-3">
                             <label className="text-[20px] font-bold text-[#215f1f]">
                                 Nome no cartão
                             </label>
@@ -89,33 +97,34 @@ export default function assinatura() {
                                 className="w-full h-[40px] rounded-md bg-[#eeeeee] hover:bg-[#ADEEAB] pl-2"
                             />
                         </div>
-                        <div>
+                        <div className="w-full flex flex-col pb-3">
                         <label className="text-[20px] font-bold text-[#215f1f]">
                                 Número do cartão
                             </label>
                             <input
-                                onChange={(event) => setNumero(event.target.value)}
+                                onChange={(event) => formatNumero(event)}
+                                value={numero}
                                 type="text"
                                 placeholder="0123 4567 8910 1112"
                                 className="w-full h-[40px] rounded-md bg-[#eeeeee] hover:bg-[#ADEEAB] pl-2"
                             />
                         </div>
-                        <div className="w-full flex flex-row">
+                        <div className="w-full flex flex-row pb-3">
                             <div className="w-[70%] pr-2">
                             <label className="text-[20px] font-bold text-[#215f1f]">
-                                Expiração
+                                Expiração (MM/AA)
                             </label>
                             <div className="flex flex-row gap-2">
                                 <input 
                                     onChange={(event) => setMes(event.target.value)}
                                     type="number" 
-                                    placeholder="00"
+                                    placeholder="MM"
                                     className="w-full h-[40px] rounded-md bg-[#eeeeee] hover:bg-[#ADEEAB] pl-2"
                                 />
                                 <input
                                     onChange={(event) => setAno(event.target.value)}
                                     type="number"
-                                    placeholder="00"
+                                    placeholder="AA"
                                     className="w-full h-[40px] rounded-md bg-[#eeeeee] hover:bg-[#ADEEAB] pl-2"
                                 />
                             </div>
@@ -152,12 +161,16 @@ export default function assinatura() {
                     )
                     
                 }              
-                <button 
-                    onClick={pagar}
-                    className="w-[100%] h-[50px] flex justify-center items-center gap-3 rounded-md border border-[#215f1f] bg-[#5bf356c2] text-[20px] font-bold text-[#215f1f] cursor-pointer hover:bg-[#5bf356c2]/80">
-                    Efetuar pagamento
-                    <LuPawPrint />
-                </button>
+                <div className="w-full h-[40px] flex justify-center items-center">
+                    <button 
+                        onClick={pagar}
+                        className="w-full h-[40px] flex justify-center items-center gap-3 rounded-md border border-[#215f1f] bg-[#5bf356c2] text-[20px] font-bold text-[#215f1f] cursor-pointer hover:bg-[#5bf356c2]/80">
+                        Efetuar pagamento
+                        <LuPawPrint />
+                    </button>   
+
+                </div>
+                
             </div>
 
         </div>
