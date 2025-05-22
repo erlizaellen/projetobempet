@@ -1,8 +1,22 @@
+
+import CardModalPass from "@/components/CardModalPass";
+import CardVantagens from "@/components/CardVantagens";
 import PageWrapper from "@/components/PageWrapper";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Login() {
+  const [cardModalPass, setCardModalPass] = useState(false);
+
+  function openCardModalPass(evento){
+    
+  }
+  
+  
+  
+
   return (
+
     <PageWrapper>
 
       <div className="w-full h-full flex">
@@ -59,13 +73,18 @@ export default function Login() {
               >
                 Entrar
               </button>
-              <p className="text-[#215f1f] text-[15px]  mt-4 flex flex-col items-center cursor-pointer underline">
+              <p 
+                 onClick={() => setCardModalPass(true)}
+                className="text-[#215f1f] text-[15px]  mt-4 flex flex-col items-center cursor-pointer underline">
                 Esqueceu sua senha?
               </p>
               <Link href="/cadastro" className="text-[#215f1f] text-[15px] mt-3 cursor-pointer underline">Já possui cadastro?</Link>
             </div>
+           
           </form>
         </div>
+
+        {cardModalPass && <CardModalPass onClose={() => setCardModalPass(false)}/>}
       </div>
     </PageWrapper >
   );
