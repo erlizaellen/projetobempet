@@ -37,8 +37,8 @@ export default function Cadastro() {
     return (
         <PageWrapper showButton={false}>
             <div className="w-full h-full flex gap-40 p-40 max-md:p-0">
-                <div className="w-[50%] h-[70vh] rounded-xl max-md:hidden">
-                    <img className="size-160" src="/img/imagem-cadastro.svg" alt="" />
+                <div className="w-[60%] flex items-center max-md:hidden">
+                    <img src="/img/imagem-cadastro.svg" alt="imagem-cadstro" />
                 </div>
                 <div className="w-[50%] h-[70vh] rounded-xl max-md:w-full">
                     <div className="w-full h-[10%] rounded-2xl">
