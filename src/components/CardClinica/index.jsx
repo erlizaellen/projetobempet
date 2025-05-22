@@ -53,12 +53,13 @@ export default function CardClinica(){
     return(
         
 
-        <div className="w-full h-auto grid sm:grid-cols-4 gap-2 items-center justify-center mt-4 sm:p-8 lg:p-16">
+        <div className="w-full h-auto grid sm:grid-cols-4 gap-3.5 items-center justify-center mt-4 sm:p-8 lg:p-16">
             {clinicas.map((clinica, index) => {
                 return (
                     <div
                         key={index}
-                        className="w-[300px] h-[300px] rounded-[50px] border-[1px] bg-amber-200 item-center justify-center"
+                        className="w-[300px] h-[300px] rounded-[50px] border-2 hover:shadow-green-500/50 shadow-lg
+                        border-[#5bf356c2] bg-amber-200 item-center justify-center cursor-pointer hover:scale-105 transition"
                     >
                         <img className="rounded-t-[50px] w-full h-[200px]" src={clinica.imagem} alt="" />
                         <h1 className="text-center text-[20px] font-bold text-green-900 italic">
