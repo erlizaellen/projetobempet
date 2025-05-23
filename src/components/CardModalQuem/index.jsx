@@ -18,12 +18,15 @@ export default function CardModalQuem({ onClose }) {
 
   return (
     <div
-    ref={modalRef}
+   
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#ffffff5e] bg-opacity-50"
-    >
-      <div className="bg-white p-6 rounded-lg shadow-xl border-tranparent w-[350px] relative ">
+     >
+      <div className="bg-white p-6 rounded-lg shadow-xl border-tranparent w-[350px] relative "
+       ref={modalRef}
+      >
+        
         <h1>Quem Somos</h1>
-        <p>
+        <p >
           {" "}
           No Bem Pet, acreditamos que cuidar do seu melhor amigo não precisa ser
           caro ou complicado. Nossa missão é aproximar tutores de pets das
