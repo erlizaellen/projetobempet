@@ -2,42 +2,55 @@ import PageWrapper from "@/components/PageWrapper";
 import CustomInput from "@/components/CustomInput";
 import { useState } from "react";
 import Link from "next/link";
-
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Cadastro() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState(0);
 
-    console.log(nome)
-    console.log(email)
-    console.log(senha)
+    function formatSenha(evento){
+        let senha = evento.target.value
+        let numeroFormatado = senha.replace(/\D/g, '') // Remove tudo que não for número
+        numeroFormatado = numeroFormatado.substring(0, 8) // Limita a 8 Dígitos
+        setSenha(numeroFormatado)
+      }
 
-    async function handleSubmit(event) {
-        event.preventDefault();
-
-        try {
-            await instance.post( "", {
-                nome: nome,
-                email: email,
-                senha: senha,
-            })
-
-            toast.success("Cadastro realizado com sucesso!")
-            setNome("");
-            setEmail("");
-            setSenha(0);
-
-        } catch (error) {
-            console.error(error)
-            toast.error("Erro ao cadastrar!")
+      async function cadastrar(event){
+        event.preventDefault()
+        if(!nome || !email || !senha){
+          return toast.error("Preencha todos os campos")
         }
-    }
+
+        if(!/\S+\.\S+/.test(email)) {
+            return toast.error("Seu email está inválido!")
+        }
+    
+        if(senha.replace(/\s/g, '').length !== 8){
+          return toast.error("Sua senha precisa conter no minímo 8 digítos!")
+        }
+
+        if(senha.length < 8){
+            return toast.error("Senha inválida!")
+          }
+
+          try {
+            
+            return toast.success("Cadastro realizado com sucesso!")
+        } catch (error) {
+            return toast.error("Erro ao cadastrar!")
+        }
+      }
 
     return (
         <PageWrapper showButton={false}>
-            <div className="w-full h-full flex gap-40 p-40 max-md:p-0">
-                <div className="w-[60%] flex items-center max-md:hidden">
+            <div className="w-full h-full flex gap-40 p-40 max-md:p-0"> 
+            <ToastContainer 
+            position="top-right"
+            autoClose={5000}
+            theme="colored"
+            />
+        <div className="w-[60%] flex items-center max-md:hidden">
                     <img src="/img/imagem-cadastro.svg" alt="imagem-cadstro" />
                 </div>
                 <div className="w-[50%] h-[70vh] rounded-xl max-md:w-full">
@@ -71,11 +84,12 @@ export default function Cadastro() {
                             placeholder="Digite sua senha"
                             type="password"
                             onChange={
-                                (event) => setSenha(event.target.value)
+                                formatSenha
                             }
                         />
                         <div className="w-full h-[60%] justify-center flex-col items-center max-sm:h-[50%] flex max-md:h-auto">
                             <button 
+                            onClick={cadastrar}
                             className="text-[#215f1f] font-bold text-[20px] cursor-pointer 
                             border-4 rounded-3xl w-[150px]">Cadastrar</button>
                             <p className="text-[#215f1f] text-[15px] flex flex-col items-center font-bold">Já tem uma conta?
