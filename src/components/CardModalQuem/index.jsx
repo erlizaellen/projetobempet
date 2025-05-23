@@ -18,13 +18,14 @@ export default function CardModalQuem({ onClose }) {
 
   return (
     <div
-   
+      
       className="fixed inset-0 z-50 flex items-center justify-center bg-[#ffffff5e] bg-opacity-50"
      >
-      <div className="bg-white p-6 rounded-lg shadow-xl border-tranparent w-[350px] relative "
+      <div className="bg-white p-6 rounded-lg shadow-xl  w-[400px] relative "
        ref={modalRef}
+       
       >
-        
+       
         <h1>Quem Somos</h1>
         <p >
           {" "}
@@ -38,7 +39,9 @@ export default function CardModalQuem({ onClose }) {
           pet, com economia e praticidade. Se você é tutor de um cão, gato ou
           outro pet querido, o Bem Pet é para você. Aqui, cuidar faz bem — pro
           pet e pro seu bolso! 💚
+        
         </p>
+        
       </div>
     </div>
   );

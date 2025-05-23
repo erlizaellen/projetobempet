@@ -3,10 +3,6 @@ export default function CardModalPass({ onClose }){
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#ffffff5e] bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-xl border-tranparent w-[350px] relative ">
 
-          <button
-           className="absolute top-2 right-3 text-gray-400 hover:text-black text-xl"
-          >
-          </button>
   
           <h2 className="text-xl font-bold text-center mb-1">Esqueceu sua senha?</h2>
           <p className="text-center text-sm text-gray-600 mb-5">
