@@ -43,9 +43,7 @@ export default function assinatura() {
         if (mes > 12 || mes < 1) {
             return toast.error("Mês de expiração invalido");
         }
-        if (senha.length < 4) {
-            return toast.error("Senha inválida");
-        }
+
     
     try {
         return toast.success("Pagamento realizado com sucesso");
