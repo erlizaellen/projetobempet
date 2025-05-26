@@ -19,26 +19,22 @@ export default function Cadastro() {
       async function cadastrar(event){
         event.preventDefault()
         if(!nome || !email || !senha){
-          return toast.error("Preencha todos os campos")
+          return toast.error("Todos os campos precisam ser preenchidos corretamente!")
         }
 
         if(!/\S+\.\S+/.test(email)) {
             return toast.error("Seu email está inválido!")
         }
-    
-        if(senha.replace(/\s/g, '').length !== 8){
-          return toast.error("Sua senha precisa conter no minímo 8 digítos!")
-        }
 
         if(senha.length < 8){
-            return toast.error("Senha inválida!")
+            return toast.error("Senha inválida! Sua senha precisa conter no minímo 8 digítos")
           }
+        toast.success("Senha cadastrada com sucesso!")
 
           try {
-            
             return toast.success("Cadastro realizado com sucesso!")
         } catch (error) {
-            return toast.error("Erro ao cadastrar!")
+            return toast.error("Erro ao cadastrar, verifique os campos preenchidos!")
         }
       }
 
