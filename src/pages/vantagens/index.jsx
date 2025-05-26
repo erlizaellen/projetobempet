@@ -12,7 +12,7 @@ export default function vantagens() {
                     <h1 className="text-[50px] font-bold text-[#215f1f]/70"> Vantagens</h1>
                 </div>
 
-                <p className="mb-8 text-[25px] font-bold text-[#215f1f]"> Conheça os <span className="text-[#215f1f]/70">todos</span> beneficios execlusivos que preparamos
+                <p className="mb-8 text-[25px] font-bold text-[#215f1f]"> Conheça <span className="text-[#215f1f]/70">todos</span> os beneficios exclusivos que preparamos
                     para você e seu pet. <br /> Uma experiência para garantir o maior cuidado.</p>
             </div>
             <div className="w-full h-auto flex flex-wrap ">
