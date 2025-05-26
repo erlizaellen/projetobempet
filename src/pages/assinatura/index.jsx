@@ -62,7 +62,7 @@ export default function assinatura() {
             <div className="w-[400px] h-auto flex flex-col items-center rounded-xl bg-white p-5 gap-3">
                 <div className="w-full flex justify-between items-center text-[#215f1f] mb-4 gap-3 text-[40px] font-bold">
                     <p>Valor:</p>
-                    <p>R$0,00</p>
+                    <p>R$9,90</p>
                 </div>
                 <div className="flex justify-center items-center text-[#215f1f] mb-2 gap-3">
                     <TbPawFilled size={22}/>
@@ -149,14 +149,12 @@ export default function assinatura() {
                         <div className="w-full h-[80%] break-words">
                             <div className="flex flex-row justify-center items-center text-[#215f1f] mb-4 gap-3">
                 
-                                <h2 className="text-[20px] font-semibold">Scaneie ou copie o codigo para efetuar o pagamento no seu app de banco. Em seguida nos envie o comprovante via 
-                                    <a className="flex flex-row items-center font-bold cursor-pointer" onClick={() => window.open("https://www.whatsapp.com")}>WhatsApp<FaWhatsapp size={20}/></a>
-                                </h2>
+                                <h2 className="text-[20px] font-semibold">Scaneie ou copie o codigo para efetuar o pagamento no seu app de banco.</h2>
                                 
                 
                             </div>
                             <img src="/img/QRCode.jpeg"alt="" />
-                            <p className="max-w-[300px]">00020126430014br.gov.bcb.pix0114+55859964602000203Pix5204000053039865802BR5921RAMIRO SILVA PINHEIRO6009FORTALEZA622905258qbcECvUnn2ibV5j47CbzoBEx63042143</p>
+                            <a href="url" target="blank" className="max-w-[300px] underline text-[#808cffcc] hover:text-[#434a8acc]">00020126430014br.gov.bcb.pix0114+55859964602000203Pix5204000053039865802BR5921RAMIRO SILVA PINHEIRO6009FORTALEZA622905258qbcECvUnn2ibV5j47CbzoBEx63042143</a>
                         </div>
                     )
                     
