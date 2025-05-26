@@ -1,6 +1,5 @@
 
 import CardModalPass from "@/components/CardModalPass";
-import CardVantagens from "@/components/CardVantagens";
 import PageWrapper from "@/components/PageWrapper";
 import Link from "next/link";
 import { useState } from "react";
