@@ -30,7 +30,7 @@ export default function vantagens() {
                         
                     </div>
                     <CardVantagens className={"bg-gray-300"} titulo={"Plano Gratis"} texto={"Apenas as funcionalidades basicas"} />
-                    <CardVantagens className={"bg-[#Ffd700]"} titulo={"Plano de Assinatura (R$0,00)"} texto={`Funcionalidades exclusivas como:`} item1={"- Acesso a cupons e promoçoes exclusivos"} item2={"- Maior alcance de busca"} item3={"- Seu pet vai te amar mais"}/>
+                    <CardVantagens className={"bg-[#Ffd700]"} titulo={"Plano de Assinatura (R$9,90)"} texto={`Funcionalidades exclusivas como:`} item1={"- Acesso a cupons e promoçoes exclusivos"} item2={"- Maior alcance de busca"} item3={"- Seu pet vai te amar mais"}/>
                 </div>
                 <div className="w-full h-full flex items-center justify-center ">
                     <button
