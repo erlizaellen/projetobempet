@@ -8,6 +8,7 @@ export default function Cadastro() {
     const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState(0);
+    
 
     function formatSenha(evento){
         let senha = evento.target.value
@@ -40,16 +41,16 @@ export default function Cadastro() {
 
     return (
         <PageWrapper showButton={false}>
-            <div className="w-full h-full flex gap-40 p-40 max-md:p-0"> 
+            <div className="w-full h-full flex gap-40 p-40 max-md:p-0 max-md:block"> 
             <ToastContainer 
             position="top-right"
             autoClose={5000}
             theme="colored"
             />
-        <div className="w-[60%] flex items-center max-md:hidden">
+        <div className="w-[60%] flex items-center max-sm:hidden max-md:hidden">
                     <img src="/img/imagem-cadastro.svg" alt="imagem-cadstro" />
                 </div>
-                <div className="w-[50%] h-[70vh] rounded-xl max-md:w-full">
+                <div className="w-[50%] h-[70vh] rounded-xl max-md:w-full ">
                     <div className="w-full h-[10%] rounded-2xl">
                         <h1 className="font-bold text-white text-[30px] justify-center flex">Cadastre-se</h1>
                     </div>
@@ -62,7 +63,7 @@ export default function Cadastro() {
                             onChange={
                                 (event) => setNome(event.target.value)
                             }
-                        />
+                             />
 
                         <CustomInput
                             label="Email"
