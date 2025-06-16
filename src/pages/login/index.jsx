@@ -21,8 +21,8 @@ export default function Login() {
         return toast.error("e-mail inválido");
     }
 
-    if (senha.length <= 12) {
-         return toast.error("Senha inválida mínimo 12 caracteres");
+    if (senha.length < 8) {
+         return toast.error("Senha inválida mínimo 8 caracteres");
     }
 
     toast.success("Login realizado com sucesso!");

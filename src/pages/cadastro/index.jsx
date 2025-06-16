@@ -3,6 +3,7 @@ import CustomInput from "@/components/CustomInput";
 import { useState } from "react";
 import Link from "next/link";
 import { ToastContainer, toast } from 'react-toastify';
+import instance from "@/api/instance";
 
 export default function Cadastro() {
     const [nome, setNome] = useState("");
@@ -30,10 +31,19 @@ export default function Cadastro() {
         if(senha.length < 8){
             return toast.error("Senha inválida! Sua senha precisa conter no minímo 8 digítos")
           }
-        toast.success("Senha cadastrada com sucesso!")
 
           try {
-            return toast.success("Cadastro realizado com sucesso!")
+                const resposta = await instance.post('/users', {
+                    name: nome,
+                    email: email,
+                    password: senha
+                })
+
+                const data = await resposta.data
+                if(data){
+                    toast.success("Usuário cadastrado com sucesso!")
+                }
+            
         } catch (error) {
             return toast.error("Erro ao cadastrar, verifique os campos preenchidos!")
         }
