@@ -50,9 +50,9 @@ export default function Header({}) {
         <div className="max-md:flex items-center justify-center hidden">
           <Menu>
             <MenuButton>
-              <TiThMenu />
-            </MenuButton>
-            <MenuItems anchor="bottom" className="w-[80px] h-auto">
+              <TiThMenu className="w-[40px] h-auto" />
+            </MenuButton> 
+            <MenuItems anchor="bottom" className="w-[80px] h-auto bg-[#5bf356c2]">
               <MenuItem>
                 <a className="block data-focus:bg-blue-100" href="/login">
                Login
