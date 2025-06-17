@@ -28,7 +28,7 @@ export default function Login() {
     }
 
     try {
-      const response = await instance.post("/loginn", {
+      const response = await instance.post("/login", {
         email: email,
         password: senha,
       });
