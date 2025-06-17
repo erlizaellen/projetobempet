@@ -5,6 +5,7 @@ import CardAddPet from "@/components/CardAddPet";
 export default function PageUsuario() {
   const [mostrarModal, setMostrarModal] = useState(false);
 
+
   return (
     <PageWrapper>
       <div className="w-full h-[350px] flex flex-col items-center justify-center">
