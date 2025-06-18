@@ -41,7 +41,7 @@ export default function PageUsuario() {
 
   return (
     <PageWrapper>
-      <div className="w-full h-[350px] flex flex-col items-center justify-center">
+      <div className="w-full h-[350px] flex flex-col items-center justify-center max-md:hidden">
         <h1 className="text-[40px] font-bold text-green-900">
           Bem vindo ao seu perfil!
         </h1>
@@ -114,12 +114,12 @@ export default function PageUsuario() {
                 <input
                   type="text"
                   placeholder="Nome do pet"
-                  className="p-2 border border-orange-300 rounded text-orange-800 outline-none"
+                  className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
                 />
                 <input
                   type="text"
                   placeholder="Raça"
-                  className="p-2 border border-orange-300 rounded text-orange-800 outline-none"
+                  className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
                 />
               </div>
             </div>
@@ -134,20 +134,20 @@ export default function PageUsuario() {
           </div>
 
           <div className="flex gap-4">
-            <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col">
+            <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col w-full">
               <label className="text-sm text-orange-600 mb-1">Idade</label>
               <input
                 type="text"
                 placeholder="Ex: 3 anos"
-                className="p-2 border border-orange-300 rounded text-orange-800 outline-none"
+                className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
               />
             </div>
-            <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col">
+            <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col w-full">
               <label className="text-sm text-orange-600 mb-1">Peso</label>
               <input
                 type="text"
                 placeholder="Ex: 30kg"
-                className="p-2 border border-orange-300 rounded text-orange-800 outline-none"
+                className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
               />
             </div>
           </div>
