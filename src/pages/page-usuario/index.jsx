@@ -3,7 +3,7 @@ import PageWrapper from "@/components/PageWrapper";
 import CardAddPet from "@/components/CardAddPet";
 import { useRouter } from "next/router";
 import instance from "@/api/instance";
-import { toast } from "react-toastify";
+import { toast ,ToastContainer } from "react-toastify";
 
 
 
@@ -45,17 +45,20 @@ export default function PageUsuario() {
       const res = await instance.put(`/users/${user.id}`, {
         telefone: phone
       })
-
-      return toast.success("vapo")
+      
+      toast.success("Telefone atualizado com sucesso!");
     } catch (error) {
       console.log(error)
-      return toast.error("pedo")
+      return toast.error("pedo");
     }
   }
 
   return (
     <PageWrapper>
+      <ToastContainer position="top-right" autoClose={5000} theme="colored" />
+      
       <div className="w-full h-[350px] flex flex-col items-center justify-center max-md:hidden">
+       
         <h1 className="text-[40px] font-bold text-green-900">
           Bem vindo ao seu perfil!
         </h1>
