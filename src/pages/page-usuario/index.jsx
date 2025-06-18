@@ -1,10 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageWrapper from "@/components/PageWrapper";
 import CardAddPet from "@/components/CardAddPet";
+import { useRouter } from "next/router";
+import instance from "@/api/instance";
+
+
 
 export default function PageUsuario() {
   const [mostrarModal, setMostrarModal] = useState(false);
+  const [user,setUser] = useState({})
+  const [pets, setPets] = useState([])
+  const router = useRouter();
+  const { id } = router.query;
 
+  
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      console.warn("Token não encontrado. Redirecionando para login.");
+      router.push("/login"); 
+      return;
+    }
+
+    async function getUserData(){
+      const response = await instance.get("/userprofile")
+      setUser(response.data)
+    }
+
+    async function getPetsUser() {
+      const response = await instance.get("/userpets")
+      setPets(response.data)
+    }
+
+    getUserData()
+    getPetsUser()
+  }, [id, router]);
+      
 
   return (
     <PageWrapper>
@@ -32,18 +65,18 @@ export default function PageUsuario() {
         <div className="flex items-center mb-6">
           <div className="w-[50px] h-[50px] rounded-full bg-gray-300 mr-4"></div>
           <div className="flex flex-col">
-            <p className="text-green-900 font-bold text-lg">Usuário</p>
+            <p className="text-green-900 font-bold text-lg">{user.name}</p>
           </div>
         </div>
 
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex flex-col bg-green-50 p-4 rounded w-full">
             <label className="text-sm mb-1 text-green-700">Email</label>
-            <input
-              type="Email"
-              placeholder="Digite seu email"
+            <p
               className="p-2 rounded border border-green-300 outline-none"
-            />
+            >
+              {user.email}
+            </p>
           </div>
 
           <div className="flex flex-col bg-green-50 p-4 rounded w-full">
