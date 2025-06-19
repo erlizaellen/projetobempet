@@ -121,8 +121,7 @@ export default function PageUsuario() {
           </div>
           <button
             onClick={() => setMostrarModal(true)}
-            className="bg-white border border-orange-500 text-orange-500 px-4 py-1 rounded hover:bg-orange-50"
-          >
+            className="bg-white border border-orange-500 text-orange-500 px-4 py-1 rounded hover:bg-orange-50">
             + Adicionar Pet
           </button>
         </div>
@@ -130,58 +129,49 @@ export default function PageUsuario() {
         {/* Pet exemplo */}
         {/* {pets.map((pet) => { */}
           {/* return ( */}
-            <div className="bg-white rounded-lg p-4 flex flex-col gap-4 w-full ">
-              <div className="flex items-center justify-between">
-                <div className="flex flex-col gap-4">
-                  <div className="rounded-full bg-orange-200 mr-4 flex items-center justify-center text-xl"></div>
-                  <div className="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="Nome do pet"
-                      className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Raça"
-                      className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
-                    />
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <button className="bg-white border border-orange-400 text-orange-400 p-1 rounded hover:bg-orange-50">
-                    Editar
-                  </button>
-                  <button className="bg-white border border-red-400 text-red-400 p-1 rounded hover:bg-red-50">
-                    Excluir
-                  </button>
-                </div>
-              </div>
+            <div className="bg-white rounded-lg p-4 flex gap-6 w-full items-start">
+             <img className="w-[300px] h-auto object-cover rounded" src="https://http.cat/images/400.jpg" alt="" />
+            <div className="flex flex-col gap-4 w-full">
+            <div className="flex gap-4">
+            <input
+             type="text"
+             placeholder="Nome do pet"
+             className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"/>
 
-              <div className="flex gap-4">
-                <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col w-full">
-                  <label className="text-sm text-orange-600 mb-1">Idade</label>
-                  <input
-                    type="text"
-                    placeholder="Ex: 3 anos"
-                    // value={pet.nascimento}
-                    className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
-                  />
-                </div>
-                <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col w-full">
-                  <label className="text-sm text-orange-600 mb-1">Peso</label>
-                  <input
-                    type="text"
-                    // value={pet.peso}
-                    placeholder="Ex: 30kg"
-                    className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
-                  />
-                </div>
-              </div>
-            </div>
-          
-        {/* )})} */}
+            <input
+             type="text"
+             placeholder="Raça"
+             className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"/>
+             </div>
+
+           <div className="flex gap-4">
+           <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col">
+          <label className="text-sm text-orange-600 mb-1">Idade</label>
+          <input
+            type="text"
+            placeholder="Ex: 3 anos"
+            className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"/>
+       </div>
+         <div className="bg-orange-50 rounded p-3 flex-1 flex flex-col">
+         <label className="text-sm text-orange-600 mb-1">Peso</label>
+       <input
+          type="text"
+          placeholder="Ex: 30kg"
+          className="p-2 border border-orange-300 rounded text-orange-800 outline-none w-full"
+        />
       </div>
-
+    </div>
+    <div className="flex gap-2">
+      <button className="bg-white border border-orange-400 text-orange-400 p-1 rounded hover:bg-orange-50">
+        Editar
+      </button>
+      <button className="bg-white border border-red-400 text-red-400 p-1 rounded hover:bg-red-50">
+        Excluir
+      </button>
+    </div>
+  </div>
+ </div>      
+  </div>
       {/* Modal para adicionar pet */}
       {mostrarModal && <CardAddPet onClose={() => setMostrarModal(false)} />}
     </PageWrapper>
